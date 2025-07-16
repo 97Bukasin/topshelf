@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Shelf Liquors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section id="header">
+  <a href="#"><img src="img/logo.png" class="logo" alt="Top Shelf Liquors"></a>
+
+  <!-- Search bar -->
+  <div id="search-box">
+    <input type="text" id="searchInput" placeholder="Search products..." oninput="handleSearch(this.value)" autocomplete="off">
+    <div id="searchResults"></div>
+  </div>
+
+  <nav>
+    <ul id="navbar">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+  <a href="cart.html" class="cart-icon">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cart-badge">0</span>
+  </a>
+</li>
+
+    </ul>
+  </nav>
+</section>
+
+
+
+<section id="hero-carousel">
+  <div class="carousel-track">
+    <img src="img/hero4.jpg" alt="Top Shelf Liquor Hero 1" />
+    <img src="img/hero2.jpg" alt="Top Shelf Liquor Hero 2" />
+    <img src="img/hero3.jpg" alt="Top Shelf Liquor Hero 3" />
+  </div>
+  <div class="hero-overlay">
+    <h2>Discover Premium Spirits</h2>
+    <p>Only the finest selections from Top Shelf Liquor</p>
+    <a href="shop.html" class="hero-btn">Shop Now</a>
+  </div>
+
+  <!-- Manual Buttons -->
+  <div class="carousel-buttons">
+    <button id="prevBtn">&#10094;</button>
+    <button id="nextBtn">&#10095;</button>
+  </div>
+</section>
+
+<section id="product1" class="products">
+  <h2>Featured Brands</h2>
+  <p>Discover our carefully selected brands that embody quality, innovation and style</p>
+
+  <div class="pro-container">
+  <div class="pro">
+  <img src="img/Features/XO.png" alt="Hennessy XO">
+  <h5>Hennessy XO</h5>
+  <p class="price">₦388,000</p>
+
+  <div class="quantity-selector">
+    <button onclick="changeQuantity(this, -1)">−</button>
+    <input type="number" value="1" min="1" readonly>
+    <button onclick="changeQuantity(this, 1)">+</button>
+  </div>
+
+  <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+
+</div>
+
+<div class="pro">
+  <img src="img/Features/1942.png" alt="Hennessy XO">
+  <h5>Don Julio 1942</h5>
+  <p class="price">₦475,000</p>
+
+  <div class="quantity-selector">
+    <button onclick="changeQuantity(this, -1)">−</button>
+    <input type="number" value="1" min="1" readonly>
+    <button onclick="changeQuantity(this, 1)">+</button>
+  </div>
+
+  <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+</div>
+
+<div class="pro">
+  <img src="img/Features/Glenfiddich.png" alt="Hennessy XO">
+  <h5>Glenfiddich 21</h5>
+  <p class="price">₦360,000</p>
+
+  <div class="quantity-selector">
+    <button onclick="changeQuantity(this, -1)">−</button>
+    <input type="number" value="1" min="1" readonly>
+    <button onclick="changeQuantity(this, 1)">+</button>
+  </div>
+
+  <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+</div>
+
+<div class="pro">
+  <img src="img/Features/Azul.png" alt="Hennessy XO">
+  <h5>Clase Azul Reposado</h5>
+  <p class="price">₦430,000</p>
+
+  <div class="quantity-selector">
+    <button onclick="changeQuantity(this, -1)">−</button>
+    <input type="number" value="1" min="1" readonly>
+    <button onclick="changeQuantity(this, 1)">+</button>
+  </div>
+
+  <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+
+</div>
+
+<!--
+<div class="more-deals">
+  <a href="shop.html" class="btn-more-deals">Checkout More Deals</a>
+</div>
+-->
+
+</section>
+
+<section id="more-deals-section">
+  <a href="shop.html" class="btn-more-deals">Checkout More Deals</a>
+</section>
+
+
+<section id="popcategories1" class="popcategories">
+  <h2>Most Popular Categories</h2>
+  <p>Discover our carefully selected categories that embody quality, innovation, and style.</p>
+
+  <div class="pro-container">
+    <a href="shop.html?category=cognac" class="category-box">
+      <img src="img/Categories/Cognac.png" alt="Cognac">
+      <h5>Cognac</h5>
+    </a>
+
+    <a href="shop.html?category=tequila" class="category-box">
+      <img src="img/Categories/Tequila.png" alt="Tequila">
+      <h5>Tequila</h5>
+    </a>
+
+    <a href="shop.html?category=whiskey" class="category-box">
+      <img src="img/Categories/Whiskey.png" alt="Whiskey">
+      <h5>Whiskey</h5>
+    </a>
+
+    <a href="shop.html?category=vodka" class="category-box">
+      <img src="img/Categories/Vodka.png" alt="Vodka">
+      <h5>Vodka</h5>
+    </a>
+  </div>
+</section>
+
+<section id="shop-section" class="products">
+  <h2>Shop</h2>
+  <p>Explore our full range of premium liquors</p>
+  <div id="shop-products" class="pro-container"></div>
+
+    <!-- Cards injected dynamically by JS -->
+
+  <div class="pagination">
+  <button id="prevPage">&lt;</button>
+  <span id="pageNumbers">1</span>
+  <button id="nextPage">&gt;</button>
+</div>
+  </div>
+</section>
+
+<section id="shop-banner" class="shop-banner">
+  <div class="overlay">
+    <div class="content">
+      <h2>Explore Our Collection</h2>
+      <a href="shop.html" class="shop-now-btn">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="about-topshelf" class="about-promo">
+  <div class="about-content">
+    <h2>Why Choose Top Shelf Liquor?</h2>
+    <p>
+      Discover premium spirits curated to elevate your taste. At <strong>Top Shelf Liquor</strong>,
+      we believe every bottle tells a story — from rare finds to your everyday favorites.
+      Whether you're gifting or indulging, we've got something for every toast.
+    </p>
+    <a href="about.html" class="learn-more-btn">Learn More</a>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Top Shelf Liquor</h4>
+      <p>Your trusted source for premium spirits and luxury drinks.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Customer Support</h4>
+      <ul>
+        <li><a href="#">Shipping & Delivery</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Top Shelf Liquor. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

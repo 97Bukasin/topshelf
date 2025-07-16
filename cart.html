@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Shelf Liquors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<section id="header">
+  <a href="#"><img src="img/logo.png" class="logo" alt="Top Shelf Liquors"></a>
+
+  <div id="search-box">
+    <input type="text" id="searchInput" placeholder="Search products..." oninput="handleSearch(this.value)" autocomplete="off">
+    <div id="searchResults"></div>
+  </div>
+
+  <nav>
+    <ul id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a class="active" href="cart.html">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-badge" class="cart-badge">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<!-- ===== Cart Section ===== -->
+<section class="cart-section section-p1">
+  <h2>Cart</h2>
+
+  <div class="cart-container">
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be injected here -->
+    </div>
+
+    <div class="cart-summary">
+      <h3>Summary</h3>
+      <p>Total: <span id="cart-total">₦0</span></p>
+      <div class="cart-actions">
+        <button onclick="clearCart()" class="clear-cart-btn">Clear Cart</button>
+       <a href="checkout.html"> <button onclick="goToCheckout()" class="checkout-btn">Proceed to Checkout</button> </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<!-- ===== Toast Notification ===== -->
+<div id="toast" class="toast"></div>
+
+<!-- ===== Footer ===== -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Top Shelf Liquor</h4>
+      <p>Your trusted source for premium spirits and luxury drinks.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Customer Support</h4>
+      <ul>
+        <li><a href="#">Shipping & Delivery</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Top Shelf Liquor. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

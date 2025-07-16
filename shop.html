@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Shelf Liquors | Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<section id="header">
+  <a href="index.html"><img src="img/logo.png" class="logo" alt="Top Shelf Liquors Logo"></a>
+
+  <div id="search-box">
+    <input type="text" id="searchInput" placeholder="Search products..." oninput="handleSearch(this.value)" autocomplete="off">
+    <div id="searchResults"></div>
+  </div>
+
+  <nav>
+    <ul id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <a href="cart.html" class="cart-icon">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cart-badge">0</span>
+    </ul>
+  </nav>
+</section>
+
+<!-- ======= SHOP BANNER ======= -->
+<section class="shop-banner">
+  <div class="overlay">
+    <div class="content">
+      <h2>Explore Our Finest Selection</h2>
+      <a href="#shop-section" class="shop-now-btn">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FILTER + SORT BAR ======= -->
+<section class="filter-bar section-p1">
+  <div class="filter-controls">
+    <label for="categoryFilter">Category</label>
+    <select id="categoryFilter" onchange="filterAndSortProducts()">
+      <option value="">All</option>
+      <option value="whiskey">Whiskey</option>
+      <option value="vodka">Vodka</option>
+      <option value="cognac">Cognac</option>
+      <option value="tequila">Tequila</option>
+      <option value="champagne">Champagne</option>
+      <option value="rum">Rum</option>
+      <option value="wines">Wine</option>
+      <option value="bitters">Bitters</option>
+    </select>
+
+    <label for="sortFilter">Sort</label>
+    <select id="sortFilter" onchange="filterAndSortProducts()">
+      <option value="">Sort by</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+    </select>
+
+    <button class="reset-filters-btn" onclick="resetFilters()">Reset Filters</button>
+
+  </div>
+</section>
+
+<!-- ======= SHOP SECTION ======= -->
+<section id="shop-section" class="products section-p1">
+  <div class="section-heading">
+    <h2>Shop</h2>
+    <p>Explore our full range of premium liquors</p>
+  </div>
+
+  <div id="shop-products" class="pro-container"></div>
+  <div class="pagination"></div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Top Shelf Liquor</h4>
+      <p>Your trusted source for premium spirits and luxury drinks.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Support</h4>
+      <ul>
+        <li><a href="#">Shipping & Delivery</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Top Shelf Liquor. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+             

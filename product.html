@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<section id="header">
+  <a href="index.html"><img src="img/logo.png" class="logo" alt="Top Shelf Liquors Logo"></a>
+
+  <div id="search-box">
+    <input type="text" id="searchInput" placeholder="Search products..." oninput="handleSearch(this.value)" autocomplete="off">
+    <div id="searchResults"></div>
+  </div>
+
+  <nav>
+    <ul id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="cart.html">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-badge"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<section id="product-details" class="single-product">
+  <div class="product-image">
+    <img id="product-img" src="" alt="Product Image">
+  </div>
+  <div class="product-info">
+    <h1 id="product-name">Loading...</h1>
+    <p class="price" id="product-price"></p>
+    <p class="category" id="product-category"></p>
+
+    <div class="quantity-selector">
+      <button onclick="changeQuantity(this, -1)">−</button>
+      <input type="number" value="1" min="1" readonly>
+      <button onclick="changeQuantity(this, 1)">+</button>
+    </div>
+
+    <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Top Shelf Liquor</h4>
+      <p>Your trusted source for premium spirits and luxury drinks.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Customer Support</h4>
+      <ul>
+        <li><a href="#">Shipping & Delivery</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Top Shelf Liquor. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
