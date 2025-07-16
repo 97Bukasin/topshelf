@@ -314,7 +314,7 @@ a {
 
 /* Banner */
 .shop-banner {
-  background: url('img/banner.jpg') no-repeat center center/cover;
+  background: url('img/explore.jpg') no-repeat center center/cover;
   height: 60vh;
   position: relative;
   display: flex;
