@@ -572,3 +572,11 @@ document.getElementById("checkout-form")?.addEventListener("submit", function (e
 
   payWithPaystack(total, email);
 });
+
+// Toggle mobile menu
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
